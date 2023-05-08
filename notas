@@ -1,0 +1,24 @@
+Borrar el mas si no hay mas stock
+Video semana 6 / dia 5
+----------------------
+
+Coloca si no hay stock 
+<p class="${quantity ? "" : "noStock"}">
+    <b >Stock: </b> ${quantity ? quantity : "noStock"}
+</p>
+
+
+Si no hay stocl oculta el signo mas
+${
+    quanlity
+    ? `<i class=".bx-plus" id="${id}"></i>`
+    : "<div></div>"
+}
+
+----------------------
+PREGUNTA: 
+products:JSON.parse(window.localStorage.getItem("products")) ||
+(await getProducts()), // ? await de product
+cart:JSON.parse(window.localStorage.getItem("cart")) ||{},
+
+
